@@ -33,7 +33,6 @@ def addperson(request):
                                                                                       temp_major, temp_skills,
                                                                                       temp_interests))
         return HttpResponse("<h2>You are successfully registered!</h2>")
-
 def updatepassword(request):
     if request.method == 'POST':
         temp_email = request.POST.get('UIUC Email Address')
@@ -75,3 +74,5 @@ def search_password(request):
             cursor.execute("select PassWord from signup_students where EmailAddress = %s;", (temp_email,))
             row = cursor.fetchone()
     return HttpResponse("<h2> your password is: <li>{%s}</li> </h2>" % row[0])
+
+
