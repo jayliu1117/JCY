@@ -9,3 +9,4 @@ class Students(models.Model):
     major = models.CharField(max_length=100)
     skills = models.CharField(max_length=100)
     interests = models.CharField(max_length=100)
+    objects = models.Manager()

@@ -26,12 +26,16 @@
       </div>
     </li>
   </ul>
-  <form class="form-inline my-2 my-lg-0">
+  <form class="form-inline my-2 my-lg-0" >
   <i class="fab fa-facebook-square mr-sm-2" ></i>
   <i class="fab fa-instagram mr-sm-2"></i>
   <i class="fab fa-twitter-square mr-sm-2"></i>
-    <button class="btn btn-info mr-sm-2 my-2 my-sm-0 mb-2" type="submit">Sign up</button>
-  <button class="btn btn-info  my-2 my-sm-0 mb-2" type="submit">Sign in</button>
+    </form>
+    <form class="form-inline my-2 my-lg-0" action="{% url 'Signup:index' %}" method="link" >
+  <button class="btn btn-info mr-sm-2 my-2 my-sm-0 mb-2" type="submit">Sign up</button>
+    </form>
+<form class="form-inline my-2 my-lg-0" action="{% url 'Signin:index' %}" method="link" >
+<button class="btn btn-info  my-2 my-sm-0 mb-2" type="submit">Sign in</button>
 </form>
 </div>
 </nav>
