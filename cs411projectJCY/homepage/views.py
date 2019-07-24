@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.db import connection
+from .models import Courses
 
 # Create your views here.
 def index(request):
     return render(request, 'homepage/home.html')
+def home_aftersignin(request):
+    return render(request, 'homepage/home_aftersignin.html')
 
 def count_registrations(request):
 
@@ -29,3 +31,10 @@ def count_competitors(request):
 
             return render(request, 'homepage/count_competitors_result.html', {'skill': skill, 'num_student': row[0]})
     return render(request, 'homepage/count_competitors.html')
+
+def fetchcoursedata(request):
+    course_list = Courses.objects.all()
+    #print(course_list)
+    return render(request, 'homepage/home_aftersignin.html', {'course_list': course_list})
+
+

@@ -77,20 +77,20 @@ WSGI_APPLICATION = 'cs411projectJCY.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'cs411projectjcy',
-    #     'USER': 'root',
-    #     'PASSWORD': 'Onepiecenaruto3@',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '3306',
-    # }
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'cs411projectjcy',
-            'USER': 'root',
-            'PASSWORD': 'Tokaino1!'
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'cs411projectjcy',
+        'USER': 'root',
+        'PASSWORD': 'Onepiecenaruto3@',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
+    #     'default': {
+    #         'ENGINE': 'django.db.backends.mysql',
+    #         'NAME': 'cs411projectjcy',
+    #         'USER': 'root',
+    #         'PASSWORD': 'Tokaino1!'
+    #     }
 
 }
 

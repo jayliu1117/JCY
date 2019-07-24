@@ -1,0 +1,66 @@
+{% extends "homepage/Header.html" %}
+{% block content %}
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Logo</a>
+
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="count">Number of Registrations</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="competitors">Number of Competitors</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+  </ul>
+  <form class="form-inline my-2 my-lg-0" >
+  <i class="fab fa-facebook-square mr-sm-2" ></i>
+  <i class="fab fa-instagram mr-sm-2"></i>
+  <i class="fab fa-twitter-square mr-sm-2"></i>
+    </form>
+    <form class="form-inline my-2 my-lg-0">
+  <button class="btn btn-primary mr-sm-2 my-2 my-sm-0 mb-2" type="submit">go to your profile</button>
+    </form>
+</div>
+</nav>
+<br>
+
+<!--<form>-->
+<!--  <input type="text" name="search" placeholder="Search..">-->
+<!--</form>-->
+
+<div class = "container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>CourseNum</th>
+        <th>CourseName</th>
+          <th>Credits</th>
+      </tr>
+    </thead>
+      <tbody>
+         {% for course_list in course_list %}
+         <tr>
+             <td>{{course_list.CourseNum}}</td>
+             <td>{{course_list.CourseName}}</td>
+             <td>{{course_list.Credits}}</td>
+         </tr>
+         {% endfor %}
+      </tbody>
+  </table>
+</div>
+
+{% endblock %}
