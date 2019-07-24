@@ -1,0 +1,12 @@
+{%  extends "homepage/Header.html" %}
+{% block content %}
+
+<h2>
+    There are currently {{num_student}} students registered!
+</h2>
+ <br>
+    <a href="{% url 'index' %}">Return</a>
+
+    <br>
+    <a href="{% url 'Signup:index' %}">Join Now!</a>
+{% endblock %}

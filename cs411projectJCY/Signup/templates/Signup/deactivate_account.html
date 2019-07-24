@@ -1,0 +1,16 @@
+{% extends "Signup/signuptemplate.html" %}
+{% block content %}
+    <form class="form-signin"action="{% url 'Signup:delete_account' %}" method="post" name="delete_account">
+        {% csrf_token %}
+  <h1>JCY</h1>
+  <h1 class="h3 mb-3 font-weight-normal">Deactivate your account here</h1>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="UIUC Email Address" name="UIUC Email Address" required autofocus>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="Password" required>
+  <button class="btn btn-lg btn-primary btn-block mb-3" type="submit">Deactivate</button>
+      <a href = "{% url 'Signup:index' %}"> create a new account</a>
+        <p class="mt-2 mb-2 text-muted"> <a href = "{% url 'Signin:index' %}" class="mt-2"> have an account? Sign in</a></p>
+      <p class="mt-3 mb-3 text-muted">&copy; 2019</p>
+</form>
+{% endblock %}
