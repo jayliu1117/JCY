@@ -1,12 +1,21 @@
 from django.shortcuts import render
 from django.db import connection
 from .models import Courses
+from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
     return render(request, 'homepage/home.html')
+
+
+
 def home_aftersignin(request):
-    return render(request, 'homepage/home_aftersignin.html')
+    course_list = Courses.objects.all()
+    #print(course_list)
+    return render(request, 'homepage/home_aftersignin.html', {'course_list': course_list})
+
+def gotoprofile(request):
+    return render(request, 'homepage/gotoprofile.html')
 
 def count_registrations(request):
 
@@ -32,9 +41,16 @@ def count_competitors(request):
             return render(request, 'homepage/count_competitors_result.html', {'skill': skill, 'num_student': row[0]})
     return render(request, 'homepage/count_competitors.html')
 
-def fetchcoursedata(request):
-    course_list = Courses.objects.all()
-    #print(course_list)
-    return render(request, 'homepage/home_aftersignin.html', {'course_list': course_list})
-
+# def fetchcoursedata(request):
+#     course_list = Courses.objects.all()
+#     #print(course_list)
+#     return render(request, 'homepage/home_aftersignin.html', {'course_list': course_list})
+# def profile(request):
+#     if request.method == 'POST':
+#         temp_email = request.POST.get('email')
+#         with connection.cursor() as cursor:
+#             cursor.execute("select EmailAddress from signup_students where EmailAddress  = %s;", (temp_email,))
+#             data = cursor.fetchone()
+#             print(data)
+#         return HttpResponse("<h2>welcome back <li>{%s}</li></h2>" % data[0])
 

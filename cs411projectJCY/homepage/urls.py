@@ -7,6 +7,8 @@ urlpatterns = [
     path('count/', views.count_registrations, name = 'count_registrations'),
     #path('addperson/', include("Signup.urls")),
     path('competitors/', views.count_competitors, name='count_competitors'),
-    path('home_aftersignin', views.home_aftersignin, name='home_after_signin'),
-    path('fetchcoursedata', views.fetchcoursedata, name='fetchcoursedata'),
+    path('home_aftersignin/', views.home_aftersignin, name='home_after_signin'),
+    #path('gotoprofile/', views.gotoprofile, name='gotoprofile'),
+    #path('profile/', views.profile, name='profile',)
+    #path('fetchcoursedata', views.fetchcoursedata, name='fetchcoursedata'),
 ]

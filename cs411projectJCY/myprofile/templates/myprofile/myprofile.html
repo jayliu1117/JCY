@@ -31,23 +31,21 @@
   <i class="fab fa-instagram mr-sm-2"></i>
   <i class="fab fa-twitter-square mr-sm-2"></i>
     </form>
+
+    <form class="form-inline my-2 my-lg-0" action="{% url 'Signin:logoff' %}" method="link">
+  <button class="btn btn-primary mr-sm-2 my-2 my-sm-0 mb-2" type="submit">log off {{account}}</button>
+    </form>
 <!--    <form class="form-inline my-2 my-lg-0">-->
-<!--      {{account}}-->
-<!--    </form>-->
-<!--    <form class="form-inline my-2 my-lg-0" action="{% url 'Signin:gotoprofile' %}" method="link">-->
-<!--  <button class="btn btn-primary mr-sm-2 my-2 my-sm-0 mb-2" type="submit">go to your profile</button>-->
-<!--    </form>-->
-    <form class="form-inline my-2 my-lg-0">
-        <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        {{account}}
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="{% url 'Signin:gotoprofile' %}">go to your profile</a>
-        <a class="dropdown-item" href="{% url 'Signin:logoff' %}">log off</a>
-      </div>
-    </li>
-      </form>
+<!--        <li class="nav-item dropdown">-->
+<!--      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">-->
+<!--        {{account}}-->
+<!--      </a>-->
+<!--      <div class="dropdown-menu">-->
+<!--        <a class="dropdown-item" href="{% url 'Signin:gotoprofile' %}">go to your profile</a>-->
+<!--        <a class="dropdown-item" href="{% url 'Signin:logoff' %}">log off</a>-->
+<!--      </div>-->
+<!--    </li>-->
+<!--      </form>-->
 </div>
 </nav>
 <br>
@@ -55,6 +53,7 @@
 <!--<form>-->
 <!--  <input type="text" name="search" placeholder="Search..">-->
 <!--</form>-->
+<!--<h2>{{account}}</h2>-->
 <div class = "container">
   <table class="table">
     <thead class="thead-dark">
@@ -69,7 +68,7 @@
          <tr>
              <td>{{course_list.CourseNum}}</td>
              <td>{{course_list.CourseName}}</td>
-           <td><a href="{% url 'Signin:addCourse' course_list.id%}">Add</a></td>
+           <td><a href="{% url 'Signin:deleteCourse' course_list.id%}">Delete</a></td>
          </tr>
          {% endfor %}
       </tbody>

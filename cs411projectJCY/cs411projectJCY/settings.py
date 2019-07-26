@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'homepage',
     'Signin',
     'Signup',
+    'myprofile',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
