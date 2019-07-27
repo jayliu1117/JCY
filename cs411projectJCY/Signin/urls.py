@@ -9,6 +9,7 @@ urlpatterns = [
     path('logoff/', views.logoff, name = 'logoff'),
     path('addCourse/<int:course_id>', views.addCourse, name='addCourse'),
     path('deleteCourse/<int:course_id>', views.deleteCourse, name = 'deleteCourse'),
+    path('areatable/', views.areatable, name = 'areatable'),
     #path('profile/', views.profile, name='profile'),
     # path('changepassword/', views.changepassword, name = 'changepassword'),
     # path('updatepassword/', views.updatepassword, name = 'updatepassword'),
