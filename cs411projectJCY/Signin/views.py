@@ -120,3 +120,11 @@ def areatable(request):
         row = namedtuplefetchall(cursor)
         print(row)
     return render(request, 'ResearchArea/areatable.html', {'account': temp_var[0], 'list': row})
+
+def jobtable(request):
+    a = "No Related Area"
+    with connection.cursor() as cursor:
+        cursor.execute("Select Company, JobTitle, CityState, Description, JobUrl from jobs_jobrelated natural join (Select AreaName from (Select AreaName, count(AreaName) Hits from (Select CourseNum From myprofile_hastaken Where EmailAddress = %s) a natural join researcharea_courserelated b Group by AreaName Order by COUNT(AreaName) DESC) c where AreaName <> %s and Hits = (Select Hits from (Select AreaName, count(AreaName) Hits from (Select CourseNum From myprofile_hastaken Where EmailAddress = %s) a natural join researcharea_courserelated b Group by AreaName Order by COUNT(AreaName) DESC) c where AreaName <> %s limit 1)) area;", (temp_var[0],a, temp_var[0], a))
+        row = namedtuplefetchall(cursor)
+        print(row)
+    return render(request, 'jobs/jobtable.html', {'account': temp_var[0], 'list':row})
