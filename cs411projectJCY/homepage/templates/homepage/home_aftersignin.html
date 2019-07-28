@@ -8,23 +8,23 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-      <a class="nav-link" href="count">Number of Registrations</a>
+      <a class="nav-link" href="{% url 'homepage:count_regi' %}">Number of Registrations</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="competitors">Number of Competitors</a>
     </li>
 
     <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Dropdown link
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-      </div>
-    </li>
+<!--    <li class="nav-item dropdown">-->
+<!--      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">-->
+<!--        Dropdown link-->
+<!--      </a>-->
+<!--      <div class="dropdown-menu">-->
+<!--        <a class="dropdown-item" href="#">Link 1</a>-->
+<!--        <a class="dropdown-item" href="#">Link 2</a>-->
+<!--        <a class="dropdown-item" href="#">Link 3</a>-->
+<!--      </div>-->
+<!--    </li>-->
   </ul>
   <form class="form-inline my-2 my-lg-0" >
   <i class="fab fa-facebook-square mr-sm-2" ></i>
@@ -40,7 +40,6 @@
     <form class="form-inline my-2 my-lg-0">
         <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        {{account}}
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="{% url 'Signin:gotoprofile' %}">go to your profile</a>
@@ -69,11 +68,30 @@
          <tr>
              <td>{{course_list.CourseNum}}</td>
              <td>{{course_list.CourseName}}</td>
-           <td><a href="{% url 'Signin:addCourse' course_list.id%}">Add</a></td>
+           <td><a href="{% url 'Signin:addCourse' course_list.id%}" >Add</a></td>
          </tr>
          {% endfor %}
       </tbody>
   </table>
+<!--     <div class="modal fade" id="myModal" role="dialog">-->
+<!--    <div class="modal-dialog">-->
+
+<!--      &lt;!&ndash; Modal content&ndash;&gt;-->
+<!--      <div class="modal-content">-->
+<!--        <div class="modal-header">-->
+<!--          <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+<!--          <h4 class="modal-title">Modal Header</h4>-->
+<!--        </div>-->
+<!--        <div class="modal-body">-->
+<!--          <p>Some text in the modal.</p>-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--    </div>-->
+<!--  </div>-->
 </div>
 
 {% endblock %}

@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'myprofile:count_reg'%}">Number of Registrations</a>
+      <a class="nav-link" href="{% url 'ResearchArea:count_regis'%}">Number of Registrations</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Number of Competitors</a>
@@ -60,23 +60,21 @@
   <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th>CourseNum</th>
-        <th>CourseName</th>
-          <th></th>
+        <th>AreaName</th>
+        <th>Hits</th>
       </tr>
     </thead>
       <tbody>
-         {% for course_list in course_list %}
+         {% for row in list %}
          <tr>
-             <td>{{course_list.CourseNum}}</td>
-             <td>{{course_list.CourseName}}</td>
-           <td><a href="{% url 'Signin:deleteCourse' course_list.id%}">Delete</a></td>
+             <td>{{row.AreaName}}</td>
+             <td>{{row.Hits}}</td>
          </tr>
          {% endfor %}
       </tbody>
   </table>
 </div>
- <form action="{% url 'Signin:areatable' %}" method="link">
-  <button class="btn btn-info right" type="submit">See related Area</button>
+ <form action="{% url 'Signin:gotoprofile' %}" method="link">
+  <button class="btn btn-info right" type="submit">go back to your profile</button>
  </form>
 {% endblock %}

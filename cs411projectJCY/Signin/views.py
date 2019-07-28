@@ -2,11 +2,11 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.http import HttpResponse
 from django.db import connection
-# from ..Signup.models import Students
 from django.http import HttpResponseRedirect
 from homepage.models import Courses
 from django.urls import  reverse
 from myprofile.models import  hasTaken
+from collections import namedtuple
 
 temp_var =  [" "]
 # Create your views here.
@@ -44,7 +44,7 @@ def login(request):
                 temp_var[0] = row[0]
                 print(row[0])
             #return render(request, 'homepage/home_aftersignin.html')
-            return redirect('/home_aftersignin',{'account':temp_var[0]})
+            return redirect('/Signin/gotoprofile',{'account':temp_var[0]})
             #return redirect('/home_aftersignin')
         else:
             return HttpResponse("<h2>The email address or password you entered is wrong </h2>")
@@ -84,6 +84,7 @@ def login(request):
 #         return HttpResponse("<h2>The email address or password you entered is wrong </h2>")
 def gotoprofile(request):
     course_list = hasTaken.objects.all()
+    print(course_list)
     return render(request, 'myprofile/myprofile.html', {'account': temp_var[0], 'course_list': course_list})
     #return HttpResponse("<h2>welcome back <li>{%s}</li></h2>" % temp_var)
 
@@ -96,12 +97,26 @@ def addCourse(request, course_id):
     course = Courses.objects.get(id = courseId)
     temp_num = course.CourseNum
     tempName = course.CourseName
-    temp_email = temp_var
+    temp_email = temp_var[0]
     temp_course = hasTaken(EmailAddress=temp_email, CourseNum = temp_num, CourseName = tempName)
     temp_course.save()
-    return HttpResponse("<h2> This course is added to your profile</h2>")
+    return redirect('/home_aftersignin')
 
 def deleteCourse(request, course_id):
     courseId = course_id
     hasTaken.objects.filter(id = courseId).delete()
     return HttpResponseRedirect(reverse('Signin:gotoprofile'))
+
+def namedtuplefetchall(cursor):
+    "Return all rows from a cursor as a namedtuple"
+    desc = cursor.description
+    nt_result = namedtuple('Result', [col[0] for col in desc])
+    return [nt_result(*row) for row in cursor.fetchall()]
+
+def areatable(request):
+    print(temp_var[0])
+    with connection.cursor() as cursor:
+        cursor.execute("Select AreaName, count(AreaName) Hits from (Select CourseNum From myprofile_hastaken Where EmailAddress = %s) a natural join researcharea_courserelated b Group by AreaName Order by COUNT(AreaName) DESC", (temp_var[0],))
+        row = namedtuplefetchall(cursor)
+        print(row)
+    return render(request, 'ResearchArea/areatable.html', {'account': temp_var[0], 'list': row})
