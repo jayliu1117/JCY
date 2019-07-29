@@ -11,6 +11,7 @@ urlpatterns = [
     path('deleteCourse/<int:course_id>', views.deleteCourse, name = 'deleteCourse'),
     path('areatable/', views.areatable, name = 'areatable'),
     path('jobtable', views.jobtable, name = 'jobtable'),
+    # path('search_course', views.search_course, name = 'search_course'),
     #path('profile/', views.profile, name='profile'),
     # path('changepassword/', views.changepassword, name = 'changepassword'),
     # path('updatepassword/', views.updatepassword, name = 'updatepassword'),

@@ -83,14 +83,20 @@ def login(request):
 #     else:
 #         return HttpResponse("<h2>The email address or password you entered is wrong </h2>")
 def gotoprofile(request):
-    course_list = hasTaken.objects.all()
+    print(temp_var[0])
+    with connection.cursor() as cursor:
+        cursor.execute("select * from myprofile_hastaken where EmailAddress = %s;", (temp_var[0],))
+        #cursor.fetchall()
+        course_list = namedtuplefetchall(cursor)
+        print(course_list)
+    #course_list = hasTaken.objects.all()
     print(course_list)
     return render(request, 'myprofile/myprofile.html', {'account': temp_var[0], 'course_list': course_list})
     #return HttpResponse("<h2>welcome back <li>{%s}</li></h2>" % temp_var)
 
 def logoff(request):
     temp_var[0] = [" "]
-    return HttpResponse("<h2>You are successfully log out</h2>")
+    return render(request, 'Signin/logoff.html')
 
 def addCourse(request, course_id):
     courseId = course_id
@@ -124,7 +130,17 @@ def areatable(request):
 def jobtable(request):
     a = "No Related Area"
     with connection.cursor() as cursor:
-        cursor.execute("Select Company, JobTitle, CityState, Description, JobUrl from jobs_jobrelated natural join (Select AreaName from (Select AreaName, count(AreaName) Hits from (Select CourseNum From myprofile_hastaken Where EmailAddress = %s) a natural join researcharea_courserelated b Group by AreaName Order by COUNT(AreaName) DESC) c where AreaName <> %s and Hits = (Select Hits from (Select AreaName, count(AreaName) Hits from (Select CourseNum From myprofile_hastaken Where EmailAddress = %s) a natural join researcharea_courserelated b Group by AreaName Order by COUNT(AreaName) DESC) c where AreaName <> %s limit 1)) area;", (temp_var[0],a, temp_var[0], a))
+        cursor.execute("Select  id, Company, JobTitle, CityState, Description, JobUrl from jobs_jobrelated natural join (Select AreaName from (Select AreaName, count(AreaName) Hits from (Select CourseNum From myprofile_hastaken Where EmailAddress = %s) a natural join researcharea_courserelated b Group by AreaName Order by COUNT(AreaName) DESC) c where AreaName <> %s and Hits = (Select Hits from (Select AreaName, count(AreaName) Hits from (Select CourseNum From myprofile_hastaken Where EmailAddress = %s) a natural join researcharea_courserelated b Group by AreaName Order by COUNT(AreaName) DESC) c where AreaName <> %s limit 1)) area;", (temp_var[0],a, temp_var[0], a))
         row = namedtuplefetchall(cursor)
         print(row)
     return render(request, 'jobs/jobtable.html', {'account': temp_var[0], 'list':row})
+# def search_course(request):
+#     if request.method == 'POST':
+#         temp_num = request.POST.get("Search")
+#         print(temp_num)
+#         with connection.cursor() as cursor:
+#             cursor.execute("select * from homepage_courses where CourseNum = %s;", (temp_num,))
+#             # cursor.fetchall()
+#             course_list = namedtuplefetchall(cursor)
+#             print(course_list)
+#     return redirect('/home_aftersignin', {'account': temp_var[0], 'course_list': course_list})

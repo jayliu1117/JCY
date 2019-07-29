@@ -66,18 +66,16 @@
              <td>{{row.Company}}</td>
              <td>{{row.JobTitle}}</td>
              <td>{{row.CityState}}</td>
-             <td>  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+             <td>  <button style="cursor: pointer;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal{{row.id}}">
     Description
   </button>
- </td>
-           <td><a href="{{row.JobUrl}}" >go to the website</a></td>
-             <div class="modal" id="myModal">
-    <div class="modal-dialog">
+                  <div class="modal" id="myModal{{row.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" id = "{{row.id}}" role="document">
       <div class="modal-content">
 
         <!-- Modal Header -->
         <div class="modal-header">
-          <h1 class="modal-title">Job Description</h1>
+          <h1 class="modal-title" id ="myModalLabel" >Job Description</h1>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
 
@@ -94,7 +92,9 @@
       </div>
     </div>
   </div>
-</div>
+
+ </td>
+           <td><a href="{{row.JobUrl}}" >go to the website</a></td>
          </tr>
          {% endfor %}
       </tbody>
@@ -122,4 +122,5 @@
  <form action="{% url 'Signin:gotoprofile' %}" method="link">
   <button class="btn btn-info right" type="submit">go back to your profile</button>
  </form>
+    </div>
 {% endblock %}

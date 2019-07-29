@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.db import connection
 from .models import Courses
+from collections import namedtuple
 from django.http import HttpResponse
 from django.shortcuts import redirect
 # Create your views here.
@@ -13,6 +14,8 @@ def home_aftersignin(request):
     course_list = Courses.objects.all()
     #print(course_list)
     return render(request, 'homepage/home_aftersignin.html', {'course_list': course_list})
+
+
 def count_regi(request):
     return render(request, 'myprofile/count-reg.html')
 

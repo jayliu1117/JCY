@@ -32,7 +32,7 @@ def addperson(request):
             cursor.execute("insert into signup_students(EmailAddress, PassWord, major, skills, interests) values(%s, %s, %s, %s, %s)", (temp_email, temp_password,
                                                                                       temp_major, temp_skills,
                                                                                       temp_interests))
-        return HttpResponse("<h2>You are successfully registered!</h2>")
+        return render(request, 'Signup/signupsuccessful.html')
 def updatepassword(request):
     if request.method == 'POST':
         temp_email = request.POST.get('UIUC Email Address')
@@ -50,7 +50,7 @@ def updatepassword(request):
         if data[0] == temp_oldpassword and temp_new == temp_confirm:
             with connection.cursor() as cursor:
                 cursor.execute("update signup_students set PassWord = %s where EmailAddress = %s;", (temp_new, temp_email))
-    return HttpResponse("<h2>Your PassWord is successfully changed </h2>")
+    return render(request, 'Signin/changepassword.html')
 def delete_account(request):
     if request.method == 'POST':
         temp_email = request.POST.get('UIUC Email Address')
@@ -64,7 +64,7 @@ def delete_account(request):
         if data[0] == temp_email and data[1] == temp_password:
             with connection.cursor() as cursor:
                 cursor.execute("delete from signup_students where EmailAddress = %s;", (temp_email,))
-    return HttpResponse("<h2>Your account is successfully closed </h2>")
+    return render(request, 'Signin/deleteaccount.html')
 
 def search_password(request):
     if request.method == 'POST':
@@ -73,6 +73,7 @@ def search_password(request):
         with connection.cursor() as cursor:
             cursor.execute("select PassWord from signup_students where EmailAddress = %s;", (temp_email,))
             row = cursor.fetchone()
-    return HttpResponse("<h2> your password is: <li>{%s}</li> </h2>" % row[0])
+    #return HttpResponse("<h2> your password is: <li>{%s}</li> </h2>" % row[0])
+    return render(request, 'Signin/forgetpassword.html', {'account': row[0]})
 
 
