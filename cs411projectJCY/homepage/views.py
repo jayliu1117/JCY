@@ -17,7 +17,10 @@ def home_aftersignin(request):
 
 
 def count_regi(request):
-    return render(request, 'myprofile/count-reg.html')
+    with connection.cursor() as cursor:
+        cursor.execute("select count(id) from signup_students")
+        row = cursor.fetchone()
+    return render(request, 'myprofile/count-reg.html',{'num_student': row[0]})
 
 def gotoprofile(request):
     return render(request, 'homepage/gotoprofile.html')
