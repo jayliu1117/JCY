@@ -39,7 +39,7 @@ def login(request):
             print(data)
         if data[0] == temp_password:
             with connection.cursor() as cursor:
-                cursor.execute("select EmailAddress from signup_students where EmailAddress = %s", (temp_email,))
+                cursor.execute("select CourseNum from myprofile_hastaken where CourseNum = %s and EmailAddress = %s", (temp_num,temp_email))
                 row = cursor.fetchone()
                 temp_var[0] = row[0]
                 print(row[0])
