@@ -8,6 +8,6 @@ def coursetale(request):
     return redirect('/home_aftersignin')
 def count_reg(request):
     with connection.cursor() as cursor:
-        cursor.execute("select count(id) from signup_students")
+        cursor.execute("select count(EmailAddress) from signup_students")
         row = cursor.fetchone()
     return render(request,'myprofile/count-reg.html',{'num_student': row[0]})

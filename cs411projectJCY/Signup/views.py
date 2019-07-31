@@ -29,10 +29,19 @@ def addperson(request):
         # major = temp_major, skills = temp_skills, interests = temp_interests)
         # temp_student.save()
         with connection.cursor() as cursor:
-            cursor.execute("insert into signup_students(EmailAddress, PassWord, major, skills, interests) values(%s, %s, %s, %s, %s)", (temp_email, temp_password,
-                                                                                      temp_major, temp_skills,
-                                                                                      temp_interests))
-        return render(request, 'Signup/signupsuccessful.html')
+            cursor.execute("select EmailAddress from signup_students where EmailAddress = %s", (temp_email,))
+            row = cursor.fetchone()
+            print(row)
+        if not row:
+            with connection.cursor() as cursor:
+                cursor.execute(
+                    "insert into signup_students(EmailAddress, PassWord, major, skills, interests) values(%s, %s, %s, %s, %s)",
+                    (temp_email, temp_password,
+                     temp_major, temp_skills,
+                     temp_interests))
+        else:
+            return render(request, 'Signup/duplicateaccount.html')
+    return render(request, 'Signup/signupsuccessful.html')
 def updatepassword(request):
     if request.method == 'POST':
         temp_email = request.POST.get('UIUC Email Address')
@@ -75,5 +84,4 @@ def search_password(request):
             row = cursor.fetchone()
     #return HttpResponse("<h2> your password is: <li>{%s}</li> </h2>" % row[0])
     return render(request, 'Signin/forgetpassword.html', {'account': row[0]})
-
 

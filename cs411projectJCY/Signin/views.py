@@ -104,8 +104,15 @@ def addCourse(request, course_id):
     temp_num = course.CourseNum
     tempName = course.CourseName
     temp_email = temp_var[0]
-    temp_course = hasTaken(EmailAddress=temp_email, CourseNum = temp_num, CourseName = tempName)
-    temp_course.save()
+    with connection.cursor() as cursor:
+        cursor.execute("select CourseNum from myprofile_hastaken where CourseNum = %s", (temp_num,))
+        row = cursor.fetchone()
+        print(row)
+    if not row:
+        temp_course = hasTaken(EmailAddress=temp_email, CourseNum = temp_num, CourseName = tempName)
+        temp_course.save()
+    else:
+        return redirect('/home_aftersignin')
     return redirect('/home_aftersignin')
 
 def deleteCourse(request, course_id):

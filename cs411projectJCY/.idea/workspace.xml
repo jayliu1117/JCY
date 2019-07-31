@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f8335bf-037c-4c14-90e5-060db8d4ac81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResearchArea/templates/ResearchArea/areatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/ResearchArea/templates/ResearchArea/areatable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ResearchArea/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ResearchArea/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signin/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup/templates/Signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Signup/templates/Signup/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signup/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signup/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/count_competitors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/count_competitors_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/templates/homepage/home_aftersignin.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/homepage/home_aftersignin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homepage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/jobtable.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/jobtable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile.html" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myprofile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myprofile/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,29 +32,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ResearchArea/templates/ResearchArea/areatable.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="209">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ResearchArea/views.py">
+        <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/home_aftersignin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+            <state relative-caret-position="76">
+              <caret line="4" column="95" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="87" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/jobtable.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="95" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homepage/views.py">
+        <entry file="file://$PROJECT_DIR$/myprofile/templates/myprofile/myprofile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="3" selection-start-line="1" selection-end-line="1" selection-end-column="32" />
+            <state relative-caret-position="209">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -62,7 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Signup/templates/Signup/signup.html" />
         <option value="$PROJECT_DIR$/Signin/templates/Signin/signin.html" />
         <option value="$PROJECT_DIR$/homepage/templates/homepage/count_competitors_result.html" />
         <option value="$PROJECT_DIR$/homepage/templates/homepage/count_registration.html" />
@@ -74,36 +103,39 @@
         <option value="$PROJECT_DIR$/myprofile/templates/myprofile/count-reg.html" />
         <option value="$PROJECT_DIR$/homepage/models.py" />
         <option value="$PROJECT_DIR$/ResearchArea/urls.py" />
-        <option value="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile.html" />
         <option value="$PROJECT_DIR$/cs411projectJCY/settings.py" />
         <option value="$PROJECT_DIR$/cs411projectJCY/urls.py" />
         <option value="$PROJECT_DIR$/jobs/urls.py" />
         <option value="$PROJECT_DIR$/jobs/views.py" />
         <option value="$PROJECT_DIR$/jobs/models.py" />
-        <option value="$PROJECT_DIR$/ResearchArea/templates/ResearchArea/areatable.html" />
-        <option value="$PROJECT_DIR$/jobs/templates/jobs/jobtable.html" />
         <option value="$PROJECT_DIR$/Signin/urls.py" />
         <option value="$PROJECT_DIR$/homepage/templates/homepage/searchcourse.html" />
-        <option value="$PROJECT_DIR$/homepage/urls.py" />
-        <option value="$PROJECT_DIR$/homepage/templates/homepage/home_aftersignin.html" />
-        <option value="$PROJECT_DIR$/Signin/views.py" />
         <option value="$PROJECT_DIR$/Signin/templates/Signin/logoff.html" />
         <option value="$PROJECT_DIR$/Signup/templates/Signup/signupsuccessful.html" />
         <option value="$PROJECT_DIR$/Signin/templates/Signin/deleteaccount.html" />
         <option value="$PROJECT_DIR$/Signin/templates/Signin/changepassword.html" />
         <option value="$PROJECT_DIR$/Signin/templates/Signin/forgetpassword.html" />
-        <option value="$PROJECT_DIR$/Signup/views.py" />
         <option value="$PROJECT_DIR$/homepage/templates/homepage/Header.html" />
+        <option value="$PROJECT_DIR$/Signup/templates/Signup/signup.html" />
+        <option value="$PROJECT_DIR$/Signup/templates/Signup/dupilcateaccount.html" />
+        <option value="$PROJECT_DIR$/Signup/urls.py" />
+        <option value="$PROJECT_DIR$/Signup/views.py" />
         <option value="$PROJECT_DIR$/homepage/templates/homepage/home.html" />
-        <option value="$PROJECT_DIR$/myprofile/views.py" />
+        <option value="$PROJECT_DIR$/homepage/urls.py" />
         <option value="$PROJECT_DIR$/homepage/views.py" />
+        <option value="$PROJECT_DIR$/myprofile/templates/myprofile/myprofile.html" />
+        <option value="$PROJECT_DIR$/myprofile/views.py" />
+        <option value="$PROJECT_DIR$/ResearchArea/templates/ResearchArea/areatable.html" />
         <option value="$PROJECT_DIR$/ResearchArea/views.py" />
+        <option value="$PROJECT_DIR$/Signin/views.py" />
+        <option value="$PROJECT_DIR$/jobs/templates/jobs/jobtable.html" />
+        <option value="$PROJECT_DIR$/homepage/templates/homepage/home_aftersignin.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="363" />
-    <option name="y" value="178" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="39" />
+    <option name="y" value="56" />
     <option name="width" value="1403" />
     <option name="height" value="858" />
   </component>
@@ -124,6 +156,55 @@
               <item name="cs411projectJCY" type="b2602c69:ProjectViewProjectNode" />
               <item name="cs411projectJCY" type="462c0819:PsiDirectoryNode" />
               <item name="homepage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs411projectJCY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs411projectJCY" type="462c0819:PsiDirectoryNode" />
+              <item name="homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs411projectJCY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs411projectJCY" type="462c0819:PsiDirectoryNode" />
+              <item name="homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="homepage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs411projectJCY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs411projectJCY" type="462c0819:PsiDirectoryNode" />
+              <item name="jobs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs411projectJCY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs411projectJCY" type="462c0819:PsiDirectoryNode" />
+              <item name="jobs" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs411projectJCY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs411projectJCY" type="462c0819:PsiDirectoryNode" />
+              <item name="jobs" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="jobs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs411projectJCY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs411projectJCY" type="462c0819:PsiDirectoryNode" />
+              <item name="myprofile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs411projectJCY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs411projectJCY" type="462c0819:PsiDirectoryNode" />
+              <item name="myprofile" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs411projectJCY" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs411projectJCY" type="462c0819:PsiDirectoryNode" />
+              <item name="myprofile" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="myprofile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cs411projectJCY" type="b2602c69:ProjectViewProjectNode" />
@@ -190,14 +271,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="291" y="143" width="1122" height="686" extended-state="0" />
-    <editor active="true" />
+    <frame x="39" y="56" width="1403" height="858" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3766114" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37655678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32884097" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -232,9 +312,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/cs411projectJCY/homepage/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/cs411projectJCY/Signup/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -245,15 +322,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/cs411projectJCY/Signup/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Signup/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -394,13 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Signup/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -411,16 +472,6 @@
     <entry file="file://$PROJECT_DIR$/Signup/templates/Signup/forgetpassword.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/jobtable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="71" column="48" lean-forward="true" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Signin/templates/Signin/signin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -428,51 +479,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/searchcourse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-831">
-          <caret line="27" selection-start-line="27" selection-start-column="4" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/searchcourse.html" />
     <entry file="file://$PROJECT_DIR$/Signin/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Signup/templates/Signup/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-489">
-          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Signup/templates/Signup/signupsuccessful.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Signin/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="98" column="46" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -494,16 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="14" lean-forward="true" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Signup/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="76" column="74" selection-start-line="76" selection-start-column="74" selection-end-line="76" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -538,24 +539,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/count_registration.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="4" lean-forward="true" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myprofile/templates/myprofile/myprofile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="81" column="14" lean-forward="true" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -566,44 +553,139 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myprofile/views.py">
+    <entry file="file://$PROJECT_DIR$/Signup/templates/Signup/dupilcateaccount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Signup/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" column="76" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+          <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/home_aftersignin.html">
+    <entry file="file://$PROJECT_DIR$/Signup/templates/Signup/signupsuccessful.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="95">
+          <caret line="5" column="16" selection-end-line="22" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ResearchArea/templates/ResearchArea/areatable.html">
+    <entry file="file://$PROJECT_DIR$/Signup/templates/Signup/signup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        <state relative-caret-position="502">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/views.py">
+    <entry file="file://$PROJECT_DIR$/homepage/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="3" selection-start-line="1" selection-end-line="1" selection-end-column="32" />
+        <state relative-caret-position="152">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ResearchArea/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        <state relative-caret-position="133">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myprofile/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Signin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="107" column="64" selection-start-line="107" selection-start-column="64" selection-end-line="107" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Signup/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="87" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/jobtable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="95" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myprofile/templates/myprofile/myprofile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResearchArea/templates/ResearchArea/areatable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/templates/homepage/home_aftersignin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="95" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
         </state>
       </provider>
     </entry>
